@@ -74,6 +74,8 @@ man mano che lo schermo si ingrandirà! */
   /* tipicamente, un laptop/desktop */
   body {
     width: 75%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #first,
@@ -90,5 +92,42 @@ man mano che lo schermo si ingrandirà! */
   #second {
     margin-right: -4px
       /* margine negativo per poter accettare il 50% della width */;
+  }
+}
+
+/* MEDIA QUERY PER LA STAMPA */
+
+@media print {
+  /* inserisce degli stili alternativi per la rappresentazione stampata della pagina */
+  body {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #first,
+  #second {
+    width: 50%;
+    display: inline-block;
+  }
+
+  #first {
+    margin-left: -4px
+      /* margine negativo per poter accettare il 50% della width */;
+  }
+
+  #second {
+    margin-right: -4px
+      /* margine negativo per poter accettare il 50% della width */;
+  }
+
+  footer {
+    /* nascondo il footer */
+    display: none;
+  }
+
+  h1 {
+    /* ingrandisco il titolo */
+    font-size: 3em;
   }
 }

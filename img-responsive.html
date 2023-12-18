@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* applicare il 100% di width su un'immagine la farà aderire sempre al proprio contenitore, quindi di fatto
+        rendendola perfettamente responsive */
+      /* alle volte però è opportuno evitare che un'immagine "sgrani", ovvero che ecceda le proprie native 
+        rendendola di fatto brutta da vedere :) per questo è utile anche impostare una max-width, ovvero la 
+        massima dimensione possibile (che non dovrebbe eccedere le dimensioni native dell'immagine) */
+      img {
+        width: 100%;
+        max-width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="img-container">
+        <img src="https://placekitten.com/600" />
+      </div>
+    </main>
+  </body>
+</html>
