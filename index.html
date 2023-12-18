@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries Introduction</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>MEDIA QUERIES!</h1>
+    </header>
+    <main>
+      <p>
+        Le media queries sono degli strumenti che ci permettono di limitare una
+        porzione di CSS solamente a schermi/dispositivi che rispettano
+        determinate condizioni. Ad esempio, è possibile creare una porzione di
+        selettore CSS che verranno applicati con le loro regole solamente su uno
+        schermo più grande di tot px sull'asse orizzontale, oppure possiamo
+        trasformare/nascondere determinate porzioni della pagina ad una
+        stampante o ad uno screen reader.
+      </p>
+      <div id="first"><span>QUESTO È FIRST</span></div>
+      <div id="second"><span>QUESTO È SECOND</span></div>
+    </main>
+    <footer>
+      <p>EPICODE copyright <span id="year"></span></p>
+    </footer>
+    <script>
+      const yearSpan = document.getElementById('year')
+      const now = new Date()
+      yearSpan.innerText = now.getFullYear() // 2023
+    </script>
+  </body>
+</html>

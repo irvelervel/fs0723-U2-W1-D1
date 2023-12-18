@@ -1,0 +1,94 @@
+/* quello che vado a scrivere ora nel CSS saranno gli stili che verranno applicati alla versione MOBILE della nostra pagina! */
+/* dobbiamo cominciare a ragionare in un'ottica MOBILE-FIRST, in quando avremo un unico documento HTML e CSS che dovranno
+contenere gli stili adatti e funzionare su qualsiasi dimensione di schermo! */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1,
+footer {
+  text-align: center;
+}
+
+#first,
+#second {
+  width: 100%;
+  height: 250px;
+  color: white;
+  position: relative;
+}
+
+#first span,
+#second span {
+  /* konami code per la centratura degli elementi in CSS, ormai si usa poco in quanto esiste FLEX */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* riporta l'elemento indietro di metà quantità */
+}
+
+#first {
+  background-color: blue;
+}
+
+#second {
+  background-color: orange;
+}
+
+/* la pagina ora si vede bene da mobile! ...è il caso di pensare adesso a QUALI MODIFICHE APPLICARE
+man mano che lo schermo si ingrandirà! */
+
+/* VISUALIZZAZIONE TABLET */
+
+@media screen and (min-width: 651px) and (orientation: portrait) {
+  /* queste regole verranno applicate solamente su dispositivi "più grandi" dello smartphone medio */
+  /* tipicamente, un tablet */
+
+  /* orientation: portrait serve a limitare questa modalità "tablet" solamente a schermi più grandi,
+  senza far cascare qui dentro degli smartphone che sono stati girati in orizzontale */
+
+  body {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #first,
+  #second {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* VISUALIZZAZIONE NOTEBOOK/DESKTOP */
+
+@media screen and (min-width: 991px) {
+  /* queste regole verranno applicate solamente su dispositivi "più grandi" del tablet medio */
+  /* tipicamente, un laptop/desktop */
+  body {
+    width: 75%;
+  }
+
+  #first,
+  #second {
+    width: 50%;
+    display: inline-block;
+  }
+
+  #first {
+    margin-left: -4px
+      /* margine negativo per poter accettare il 50% della width */;
+  }
+
+  #second {
+    margin-right: -4px
+      /* margine negativo per poter accettare il 50% della width */;
+  }
+}
